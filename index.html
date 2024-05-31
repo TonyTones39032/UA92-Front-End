@@ -1,0 +1,1107 @@
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the HTML document -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensures compatibility with Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport to scale properly on mobile devices -->
+    <title>Food Website</title> <!-- Title of the webpage that appears in the browser tab -->
+    <!-- Links to external stylesheets for Bootstrap and Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css"> <!-- Link to a custom stylesheet -->
+</head>
+<body> <!-- Body section containing the content of the webpage -->
+
+    <section id="Home"> <!-- Section for the Home part of the webpage -->
+        <nav> <!-- Navigation bar -->
+            <div class="logo"> <!-- Logo container -->
+                <img src="logo.jpeg" alt="CompanyLogo"> <!-- Logo image -->
+            </div>
+            <ul> <!-- Navigation links -->
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="#Gallery">Gallery</a></li>
+                <li><a href="#Blog">Blog</a></li>
+                <li><a href="#Review">Review</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#Team">Team</a></li>
+                <li><a href="#Account">Account</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+
+            <div class="icon"> <!-- Container for icons and search bar -->
+                <input type="text" id="searchBar" placeholder="Search for products..."> <!-- Search bar -->
+                <i class="fa-solid fa-magnifying-glass" onclick="searchProducts()"></i> <!-- Search icon -->
+                <i class="fa-solid fa-cart-shopping" id="cartIcon" onclick="showCart()"></i> <!-- Cart icon -->
+                <button id="goBackButton" onclick="goBack()">Go Back</button> <!-- Go Back button -->
+            </div>
+        </nav>
+
+        <div class="main"> <!-- Main content area -->
+
+            <div class="men_text"> <!-- Text container -->
+                <h1>Get Freshly<span> Baked Goods</span><br>Easily!</h1> <!-- Heading with highlighted text -->
+            </div>
+            <script> <!-- JavaScript for search functionality -->
+                function searchProducts() { 
+                    const query = document.getElementById('searchBar').value.toLowerCase(); // Get search query
+                    const products = document.querySelectorAll('.menu_card'); // Get all product cards
+            
+                    products.forEach(product => { // Iterate over each product card
+                        const productName = product.querySelector('h2').textContent.toLowerCase(); // Get product name
+                        if (productName.includes(query)) { 
+                            product.style.display = 'block'; // Show product if name matches query
+                        } else {
+                            product.style.display = 'none'; // Hide product if name does not match query
+                        }
+                    });
+                }
+            
+                // Optional: Add an event listener to handle "Enter" key press for the search bar
+                document.getElementById('searchBar').addEventListener('keypress', function (e) {
+                    if (e.key === 'Enter') { 
+                        searchProducts(); // Call search function when Enter key is pressed
+                    }
+                });
+            </script>
+            
+            <div class="main_image"> <!-- Image container -->
+                <img src="almond.jpg" alt="almond croissant" class="img-fluid"> <!-- Main image -->
+            </div>
+
+        </div>
+
+        <p> <!-- Welcome paragraph -->
+            Welcome to Crust Worthy, where every day is a celebration of baking. We're a haven for those who appreciate the simple joys of handcrafted treats, made with love and the finest ingredients. From flaky pastries and buttery cookies to decadent cakes and comforting pies, we invite you to indulge in the sweetness of life with us..
+        </p>
+
+        <div class="main_btn"> <!-- Order now button -->
+            <a href="#Menu">Order Now</a>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <div class="about" id="About">
+        <div class="about_main">
+
+            <div class="image">
+                <img src="choc.jpg " class="img-fluid"> <!-- About section image -->
+            </div>
+
+            <div class="about_text"> <!-- About section text -->
+                <h1><span>About</span>Us</h1> <!-- Heading -->
+                <h3>Why Choose us?</h3> <!-- Subheading -->
+                <p>
+                    At Crust Worthy, we're passionate about all things baked. From flaky croissants and buttery scones to decadent cupcakes and chewy cookies, we believe that life's sweetest moments (and some savory ones too!) are best enjoyed with a delicious treat.  Our dedicated team of bakers uses fresh, high-quality ingredients to create handcrafted baked goods that will satisfy any craving.
+                </p> 
+                <br>
+                <p> In addition to our commitment to quality and taste, Crust Worthy is dedicated to sustainability and community engagement. We source our ingredients from local farmers and suppliers who practice environmentally friendly farming methods. Our packaging is eco-friendly, and we actively participate in community events and charitable initiatives. We believe in giving back to the community that supports us, and we're proud to contribute to a more sustainable and compassionate world. At Crust Worthy, every bite you take not only delights your taste buds but also supports a greater cause.</p>
+
+            </div>
+
+        </div>
+    </div><br><br>
+
+    <!-- Menu Section -->
+    <div class="menu" id="Menu">
+        <h1>Our<span>Menu</span></h1> <!-- Menu section heading -->
+
+        <div class="menu_box"> <!-- Menu items container -->
+            <div class="menu_card"> <!-- Individual menu item card -->
+                <div class="menu_image">
+                    <img src="cia.jpg" class="img-fluid" alt="ciabatta"> <!-- Menu item image -->
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i> <!-- Favorite icon -->
+                </div>
+                <div class="menu_info"> <!-- Menu item information -->
+                    <h2>Ciabatta</h2>
+                    <p> A rustic Italian bread with a crisp crust and a light, airy texture, perfect for sandwiches or dipping in olive oil.</p> <!-- Item name -->
+                    <h3>$7.00</h3> <!-- Item price -->
+                    <a href="#" class="menu_btn">Order Now</a> <!-- Order now button -->
+                </div>
+            </div> 
+            
+            <div class="menu_card">
+                <div class="menu_image" class="img-fluid" alt="chocolate cake">
+                    <img src="choc.jpg" >
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Choc Cookies</h2>
+                    <p>Soft and chewy cookies loaded with rich chocolate chips, a delightful treat for any chocolate lover.</p>
+                    <h3>$5.00</h3>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+            </div> 
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="cros.jpg" class="img-fluid" alt="croissant">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Croissants</h2>
+                    <p>Flaky and buttery French pastries, baked to golden perfection, ideal for breakfast or a light snack./p>
+                    <h3>$8.00</h3>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+            </div> 
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="mac.jpg" class="img-fluid" alt="macarons">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i
+
+>
+                </div>
+                <div class="menu_info">
+                    <h2>Macarons</h2>
+                    <p>Delicate almond meringue cookies with a crisp shell and a soft, flavorful filling, available in various colors and flavors.
+                    </p>
+                    <h3>$10.00</h3>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+            </div> 
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="brownie.jpg" class="img-fluid" alt="browniw">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Brownies</h2>
+                    <p>Fudgy and rich chocolate brownies, with a perfectly crackly top and a gooey center, satisfying any sweet tooth.</p>
+                    <h3>$15.00</h3>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+            </div> 
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="cin.jpg" class="img-fluid" alt="cinnamon role">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Cinnamon Rolls</h2>
+                    <p>Soft, fluffy rolls swirled with a cinnamon-sugar filling and topped with a sweet cream cheese glaze.</p>
+                    <h3>$8.00</h3>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+            </div> 
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="cheese.jpg" class="img-fluid" alt="ciabatta">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Cheesecake</h2>
+                    <p>Creamy and smooth cheesecake with a buttery graham cracker crust, available in classic or fruit-topped varieties.</p>
+                    <h3>$12.00</h3>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+            </div> 
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="muffin.jpg" class="img-fluid" alt="blueberry muffin">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Blueberry Muffins</h2>
+                    <p>Moist and tender muffins bursting with juicy blueberries, perfect for breakfast or a snack on the go.</p>
+                    <h3>$10.00</h3>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+            </div> 
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="choccake.jpg" class="img-fluid" alt="chocolate cake">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Chocolate Cake</h2>
+                    <p>Decadent layers of rich chocolate cake filled and frosted with creamy chocolate ganache.</p>
+                    <h3>$13.00</h3>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+            </div> 
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="eclairs.jpg" class="img-fluid" alt="eclairs">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Eclairs</h2>
+                    <p>Light and airy choux pastry filled with rich pastry cream and topped with a glossy chocolate glaze.</p>
+                    <h3>$7.00</h3>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+            </div> 
+
+            <div class="menu_card">
+                <div class="menu_image"  class="img-fluid" alt="pretzel">
+                    <img src="pret.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Pretzels</h2>
+                    <p>Soft, chewy pretzels with a golden-brown crust, sprinkled with coarse salt, perfect for dipping in mustard or cheese.</p>
+                    <h3>$15.00</h3>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+            </div> 
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="scone.jpg" class="img-fluid" alt="scones">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Scones</h2>
+                    <p>Tender and crumbly scones with a hint of sweetness, ideal for enjoying with jam and clotted cream.</p>
+                    <h3>$4.00</h3>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery" id="Gallery">
+        <h1>Our<span>Gallery</span></h1> <!-- Gallery section heading -->
+
+        <div class="gallery_image_box"> <!-- Gallery images container -->
+            <div class="gallery_image">
+                <img src="cookie.jpg" alt="brownie" > 
+            </div>
+            <div class="gallery_image">
+                <img src="image/gallary_2.jpg" alt="">
+            </div>
+            <div class="gallery_image">
+                <img src="image/gallary_3.jpg" alt="cupcakes">
+            </div>
+            <div class="gallery_image">
+                <img src="image/gallary_4.jpg" alt="banana bread">
+            </div>
+            <div class="gallery_image">
+                <img src="mac.jpg" alt="macarons">
+            </div>
+            <div class="gallery_image">
+                <img src="image/gallary_6.jpg" alt="cake">
+            </div>
+            <div class="gallery_image">
+                <img src="cake.jpg" alt="chocolate cake">
+            </div>
+            <div class="gallery_image">
+                <img src="bag.jpg" alt="baguette">
+            </div>
+         
+        </div>
+    </div>
+
+
+    <!-- Blog Section -->
+    <div class="blog" id="Blog">
+        <h1>Write a <span>Blog</span></h1> <!-- Blog section heading -->
+        <div class="blog_form">
+            <form id="blogForm"> <!-- Blog form -->
+                <div class="input">
+                    <p>Title</p>
+                    <input type="text" id="blogTitle" placeholder="Blog Title" required> <!-- Blog title input -->
+                </div>
+                <div class="input">
+                    <p>Content</p>
+                    <textarea id="blogContent" placeholder="Write your blog here..." required></textarea> <!-- Blog content textarea -->
+                </div>
+                <button type="submit" class="btn btn-secondary">Submit</button> <!-- Submit button -->
+            </form>
+        </div>
+        <div class="blog_posts" id="blogPosts">
+            <h2>Blog Posts</h2> <!-- Blog posts heading -->
+        </div>
+    </div>
+
+    <script> <!-- JavaScript for blog functionality -->
+        document.addEventListener('DOMContentLoaded', () => { // Event listener for DOMContentLoaded
+            const blogForm = document.getElementById('blogForm'); // Get blog form element
+            const blogPosts = document.getElementById('blogPosts'); // Get blog posts container
+        
+            loadBlogPosts(); // Load saved blog posts from local storage
+        
+            blogForm.addEventListener('submit', (e) => { // Handle form submission
+                e.preventDefault(); // Prevent default form submission
+        
+                const title = document.getElementById('blogTitle').value; // Get blog title
+                const content = document.getElementById('blogContent').value; // Get blog content
+        
+                const post = { // Create a new post object
+                    title,
+                    content,
+                    date: new Date().toLocaleString(), // Add current date and time
+                    id: Date.now() // Generate unique ID
+                };
+        
+                saveBlogPost(post); // Save the post to local storage
+                displayBlogPost(post); // Display the post in the blog posts container
+                blogForm.reset(); // Reset the form
+            });
+        
+            function loadBlogPosts() { // Load blog posts from local storage
+                const posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+
+ // Get saved posts or empty array
+                posts.forEach(post => displayBlogPost(post)); // Display each saved post
+            }
+        
+            function saveBlogPost(post) { // Save a blog post to local storage
+                const posts = JSON.parse(localStorage.getItem('blogPosts')) || []; // Get saved posts or empty array
+                posts.push(post); // Add new post to array
+                localStorage.setItem('blogPosts', JSON.stringify(posts)); // Save updated array to local storage
+            }
+        
+            function displayBlogPost(post) { // Display a blog post in the blog posts container
+                const postElement = document.createElement('div'); // Create a new div element
+                postElement.className = 'post'; // Add class to post element
+                postElement.dataset.id = post.id; // Set data-id attribute
+        
+                const postTitle = document.createElement('h3'); // Create a new h3 element for post title
+                postTitle.textContent = post.title; // Set post title text
+        
+                const postContent = document.createElement('p'); // Create a new p element for post content
+                postContent.textContent = post.content; // Set post content text
+        
+                const postDate = document.createElement('small'); // Create a new small element for post date
+                postDate.textContent = `Posted on: ${post.date}`; // Set post date text
+        
+                const deleteButton = document.createElement('button'); // Create a new button element for deleting post
+                deleteButton.textContent = 'Delete'; // Set delete button text
+                deleteButton.addEventListener('click', () => deleteBlogPost(post.id, postElement)); // Add click event listener to delete button
+        
+                postElement.appendChild(postTitle); // Append post title to post element
+                postElement.appendChild(postContent); // Append post content to post element
+                postElement.appendChild(postDate); // Append post date to post element
+                postElement.appendChild(deleteButton); // Append delete button to post element
+        
+                blogPosts.appendChild(postElement); // Append post element to blog posts container
+            }
+        
+            function deleteBlogPost(id, postElement) { // Delete a blog post from local storage and UI
+                let posts = JSON.parse(localStorage.getItem('blogPosts')) || []; // Get saved posts or empty array
+                posts = posts.filter(post => post.id !== id); // Filter out the post to delete
+                localStorage.setItem('blogPosts', JSON.stringify(posts)); // Save updated array to local storage
+                blogPosts.removeChild(postElement); // Remove post element from UI
+            }
+        });
+    </script>
+  
+<!-- Review Section -->
+<div class="review" id="Review">
+    <h1>Submit a <span>Review</span></h1> <!-- Review section heading -->
+    <div class="review_form">
+        <form id="reviewForm"> <!-- Review form -->
+            <div class="input">
+                <p>Name</p>
+                <input type="text" id="reviewName" placeholder="Your Name" required> <!-- Review name input -->
+            </div>
+            <div class="input">
+                <p>Review</p>
+                <textarea id="reviewContent" placeholder="Write your review here..." required></textarea> <!-- Review content textarea -->
+            </div>
+            <div class="input">
+                <p>Rating</p>
+                <div class="stars" id="starRating"> <!-- Star rating system -->
+                    <i class="fa fa-star" data-value="1"></i>
+                    <i class="fa fa-star" data-value="2"></i>
+                    <i class="fa fa-star" data-value="3"></i>
+                    <i class="fa fa-star" data-value="4"></i>
+                    <i class="fa fa-star" data-value="5"></i>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-secondary">Submit</button> <!-- Submit button -->
+        </form>
+    </div>
+    <div class="review_posts" id="reviewPosts">
+        <h2>Customer Reviews</h2> <!-- Customer reviews heading -->
+    </div>
+</div>
+
+<script> <!-- JavaScript for review functionality -->
+    document.addEventListener('DOMContentLoaded', () => { // Event listener for DOMContentLoaded
+        const reviewForm = document.getElementById('reviewForm'); // Get review form element
+        const reviewPosts = document.getElementById('reviewPosts'); // Get review posts container
+        let selectedRating = 0; // Initialize selected rating to 0
+
+        loadReviews(); // Load saved reviews from local storage
+
+        reviewForm.addEventListener('submit', (e) => { // Handle form submission
+            e.preventDefault(); // Prevent default form submission
+
+            const name = document.getElementById('reviewName').value; // Get reviewer's name
+            const content = document.getElementById('reviewContent').value; // Get review content
+
+            const review = { // Create a new review object
+                name,
+                content,
+                rating: selectedRating, // Add selected rating
+                date: new Date().toLocaleString(), // Add current date and time
+                id: Date.now() // Generate unique ID
+            };
+
+            saveReview(review); // Save the review to local storage
+            displayReview(review); // Display the review in the review posts container
+            reviewForm.reset(); // Reset the form
+            clearStarSelection(); // Clear star selection
+        });
+
+        document.querySelectorAll('.stars i').forEach(star => { // Handles the star selection
+            star.addEventListener('click', () => { // Add click event listener to each star
+                selectedRating = parseInt(star.getAttribute('data-value')); // Get selected star value
+                updateStarSelection(selectedRating); // Update star selection
+            });
+        });
+
+        function loadReviews() { // Load reviews from local storage
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || []; // Get saved reviews or empty array
+            reviews.forEach(review => displayReview(review)); // Display each saved review
+        }
+
+        function saveReview(review) { // Save a review to local storage
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || []; // Get saved reviews or empty array
+            reviews.push(review); // Add new review to array
+            localStorage.setItem('reviews', JSON.stringify(reviews)); // Save updated array to local storage
+        }
+
+        function displayReview(review) { // Display a review in the review posts container
+            const postElement = document.createElement('div'); // Create a new div element
+            postElement.className = 'post'; // Add class to post element
+            postElement.dataset.id = review.id; // Set data-id attribute
+
+            const postName = document.createElement('h3'); // Create a new h3 element for reviewer's name
+            postName.textContent = review.name; // Set reviewer's name text
+
+            const postContent = document.createElement('p'); // Create a new p element for review content
+            postContent.textContent = review.content; // Set review content text
+
+            const postRating = document.createElement('div'); // Create a new div element for rating stars
+            postRating.className = 'stars'; // Add class to rating stars
+            for (let i = 1; i <= 5; i++) { // Loop to create each star
+                const star = document.createElement('i'); // Create a new i element for each star
+                star.className = 'fa fa-star'; // Add class to each star
+                if (i <= review.rating) { // Check if star should be selected
+                    star.classList.add('selected'); // Add selected class to star
+                }
+                postRating.appendChild(star); // Append star to rating stars div
+            }
+
+            const postDate = document.createElement('small'); // Create a new small element for review date
+            postDate.textContent = `Posted on: ${review.date}`; // Set review date text
+
+            const deleteButton = document.createElement('button'); // Create a new button element for deleting review
+            deleteButton.textContent = 'Delete'; // Set delete button text
+            deleteButton.addEventListener('click', () => deleteReview(review.id, postElement)); // Add click event listener to delete button
+
+            postElement.appendChild(postName); // Append reviewer's name to post element
+            postElement.appendChild(postContent); // Append review content to post element
+            postElement.appendChild(postRating); // Append rating stars to post element
+            postElement.appendChild(postDate); // Append review date to post element
+            postElement.appendChild(deleteButton); // Append delete button to post element
+
+            reviewPosts.appendChild(postElement); // Append post element to review posts container
+        }
+
+        function deleteReview(id, postElement) { // Delete a review from local storage and UI
+            let reviews = JSON.parse(localStorage.getItem('reviews')) || []; // Get saved reviews or empty array
+            reviews = reviews.filter(review => review.id !== id); // Filter out the review to delete
+            localStorage.setItem('reviews', JSON.stringify(reviews)); // Save updated array to local storage
+            reviewPosts.removeChild(postElement); // Remove post element from UI
+        }
+
+        function updateStarSelection(rating) { // Update star selection based on rating
+            document.querySelectorAll('.stars i').forEach(star => { // Iterate over each star
+                star.classList.remove('selected'); // Remove selected class from star
+                if (parseInt(star.getAttribute('data-value')) <= rating) { // Check if star should be selected
+                    star.classList.add('selected'); // Add selected class to star
+               
+
+ }
+            });
+        }
+
+        function clearStarSelection() { // Clear star selection
+            selectedRating = 0; // Reset selected rating to 0
+            document.querySelectorAll('.stars i').forEach(star => { // Iterate over each star
+                star.classList.remove('selected'); // Remove selected class from star
+            });
+        }
+    });
+</script>
+<!-- FAQ Section -->
+<div class="faq" id="FAQ">
+    <h1>Frequently Asked <span>Questions</span></h1> <!-- FAQ section heading -->
+    <div class="faq_posts" id="faqPosts"> <!-- Container for FAQ posts -->
+        <div class="faq_post">
+            <h3>What are your opening hours?</h3>
+            <p>We are open from 8 AM to 8 PM, Monday to Saturday.</p>
+        </div>
+        <div class="faq_post">
+            <h3>Do you offer gluten-free options?</h3>
+            <p>Yes, we have a variety of gluten-free baked goods available.</p>
+        </div>
+        <div class="faq_post">
+            <h3>Can I place an order online?</h3>
+            <p>Yes, you can place an order through our website or app.</p>
+        </div>
+    </div>
+
+    <div class="faq_form">
+        <h2>Post a New Question</h2>
+        <form id="faqForm"> <!-- FAQ form -->
+            <div class="input">
+                <p>Question</p>
+                <input type="text" id="faqQuestion" placeholder="Your Question" required> <!-- Question input -->
+            </div>
+            <div class="input">
+                <p>Answer</p>
+                <textarea id="faqAnswer" placeholder="Your Answer" required></textarea> <!-- Answer input -->
+            </div>
+            <button type="submit" class="btn btn-secondary">Submit</button> <!-- Submit button -->
+        </form>
+    </div>
+</div>
+
+<script> <!-- JavaScript for FAQ functionality -->
+    document.addEventListener('DOMContentLoaded', () => { // Event listener for DOMContentLoaded
+        const faqForm = document.getElementById('faqForm'); // Get FAQ form element
+        const faqPosts = document.getElementById('faqPosts'); // Get FAQ posts container
+
+        loadFAQs(); // Load saved FAQs from local storage
+
+        faqForm.addEventListener('submit', (e) => { // Handle form submission
+            e.preventDefault(); // Prevent default form submission
+
+            const question = document.getElementById('faqQuestion').value; // Get question
+            const answer = document.getElementById('faqAnswer').value; // Get answer
+
+            const faq = { // Create a new FAQ object
+                question,
+                answer,
+                id: Date.now() // Generate unique ID
+            };
+
+            saveFAQ(faq); // Save the FAQ to local storage
+            displayFAQ(faq); // Display the FAQ in the FAQ posts container
+            faqForm.reset(); // Reset the form
+        });
+
+        function loadFAQs() { // Load FAQs from local storage
+            const faqs = JSON.parse(localStorage.getItem('faqs')) || []; // Get saved FAQs or empty array
+            faqs.forEach(faq => displayFAQ(faq)); // Display each saved FAQ
+        }
+
+        function saveFAQ(faq) { // Save an FAQ to local storage
+            const faqs = JSON.parse(localStorage.getItem('faqs')) || []; // Get saved FAQs or empty array
+            faqs.push(faq); // Add new FAQ to array
+            localStorage.setItem('faqs', JSON.stringify(faqs)); // Save updated array to local storage
+        }
+
+        function displayFAQ(faq) { // Display an FAQ in the FAQ posts container
+            const faqElement = document.createElement('div'); // Create a new div element
+            faqElement.className = 'faq_post'; // Add class to FAQ element
+            faqElement.dataset.id = faq.id; // Set data-id attribute
+
+            const faqQuestion = document.createElement('h3'); // Create a new h3 element for question
+            faqQuestion.textContent = faq.question; // Set question text
+
+            const faqAnswer = document.createElement('p'); // Create a new p element for answer
+            faqAnswer.textContent = faq.answer; // Set answer text
+
+            const deleteButton = document.createElement('button'); // Create a new button element for deleting FAQ
+            deleteButton.textContent = 'Delete'; // Set delete button text
+            deleteButton.addEventListener('click', () => deleteFAQ(faq.id, faqElement)); // Add click event listener to delete button
+
+            faqElement.appendChild(faqQuestion); // Append question to FAQ element
+            faqElement.appendChild(faqAnswer); // Append answer to FAQ element
+            faqElement.appendChild(deleteButton); // Append delete button to FAQ element
+
+            faqPosts.appendChild(faqElement); // Append FAQ element to FAQ posts container
+        }
+
+        function deleteFAQ(id, faqElement) { // Delete an FAQ from local storage and UI
+            let faqs = JSON.parse(localStorage.getItem('faqs')) || []; // Get saved FAQs or empty array
+            faqs = faqs.filter(faq => faq.id !== id); // Filter out the FAQ to delete
+            localStorage.setItem('faqs', JSON.stringify(faqs)); // Save updated array to local storage
+            faqPosts.removeChild(faqElement); // Remove FAQ element from UI
+        }
+    });
+</script>
+
+<!-- Contact Section -->
+<div class="contact" id="Contact">
+    <h1><span>Contact</span> Us</h1> <!-- Contact section heading -->
+    <div class="contact_main">
+        <div class="contact_image">
+            <img src="image.jpeg" alt="bakery"> <!-- Contact section image -->
+        </div>
+        <form id="contactForm"> <!-- Contact form -->
+            <div class="input">
+                <p>Name</p>
+                <input type="text" id="contactName" placeholder="Your Name" required> <!-- Name input -->
+            </div>
+            <div class="input">
+                <p>Email</p>
+                <input type="email" id="contactEmail" placeholder="Your Email" required> <!-- Email input -->
+            </div>
+            <div class="input">
+                <p>Subject</p>
+                <input type="text" id="contactSubject" placeholder="Subject" required> <!-- Subject input -->
+            </div>
+            <div class="input">
+                <p>Message</p>
+                <textarea id="contactMessage" placeholder="Your Message" required></textarea> <!-- Message input -->
+            </div>
+            <button type="submit" class="btn btn-secondary">Submit</button> <!-- Submit button -->
+        </form>
+    </div>
+</div>
+
+<script> <!-- JavaScript for contact form functionality -->
+    document.addEventListener('DOMContentLoaded', () => { // Event listener for DOMContentLoaded
+        const contactForm = document.getElementById('contactForm'); // Get contact form element
+    
+        contactForm.addEventListener('submit', (e) => { // Handle form submission
+            e.preventDefault(); // Prevent default form submission
+    
+            const name = document.getElementById('contactName').value; // Get name
+            const email = document.getElementById('contactEmail').value; // Get email
+            const subject = document.getElementById('contactSubject').value; // Get subject
+            const message = document.getElementById('contactMessage').value; // Get message
+    
+            alert(`Thank you, ${name}! Your message has been received.`); // Display confirmation message
+    
+            contactForm.reset(); // Reset the form
+        });
+    });
+</script>
+
+<!-- Team Section -->
+<div class="team" id="Team">
+    <h1>Our<span>Team</span></h1> <!-- Team section heading -->
+    <div class="team_box"> <!-- Team members container -->
+        <div class="profile"> <!-- Individual team member profile -->
+            <img src="staff1.jpeg">
+            <div class="info">
+                <h2 class="name">Jenny</h2>
+                <p class="bio">Baker</p>
+                <div class="team_icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <div class="profile">
+            <img src="staff2.jpeg">
+            <div class="info">
+                <h2 class="name">Rebecca</h2>
+                <p class="bio">Baker</p>
+                <div class="team_icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <div class="profile">
+            <img src="staff3.jpeg">
+            <div class="info">
+                <h2 class="name">Anthony</h2>
+                <p class="bio">Baker</p>
+                <div class="team_icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <div class="profile">
+            <img src="staff4.jpeg">
+            <div class="info">
+                <h2 class
+
+="name">Joshua</h2>
+                <p class="bio">Baker</p>
+                <div class="team_icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cart Section -->
+<div class="cart" id="cart" style="display: none;"> <!-- Cart section, initially hidden -->
+    <button class="btn btn-secondary close-cart" id="closeCartBtn">Close</button> <!-- Close cart button -->
+    <h1>Your <span>Cart</span></h1> <!-- Cart heading -->
+    <div class="cart-items"> <!-- Container for cart items -->
+        <!-- Cart items will be added here dynamically -->
+    </div>
+    <div class="cart-total">
+        <p>Total: $<span id="cartTotal">0.00</span></p> <!-- Total price -->
+        <button class="btn btn-secondary" id="checkoutBtn">Checkout</button> <!-- Checkout button -->
+    </div>
+</div>
+
+<script> <!-- JavaScript for cart functionality -->
+    document.addEventListener('DOMContentLoaded', () => { // Event listener for DOMContentLoaded
+        const cart = []; // Initialize empty cart array
+        const cartSection = document.getElementById('cart'); // Get cart section element
+        const cartItemsContainer = document.querySelector('.cart-items'); // Get cart items container
+        const cartTotalElement = document.getElementById('cartTotal'); // Get cart total element
+        const closeCartBtn = document.getElementById('closeCartBtn'); // Get close cart button
+
+        function addToCart(productName, productPrice) { // Add to cart function
+            const product = { name: productName, price: parseFloat(productPrice), id: Date.now() }; // Create product object
+            cart.push(product); // Add product to cart array
+            updateCart(); // Update cart UI
+        }
+
+        function updateCart() { // Update cart UI
+            cartItemsContainer.innerHTML = ''; // Clear existing items
+            let total = 0; // Initialize total price
+            cart.forEach(item => { // Iterate over each cart item
+                total += item.price; // Add item price to total
+                const cartItem = document.createElement('div'); // Create a new div element for cart item
+                cartItem.classList.add('cart-item'); // Add class to cart item
+                cartItem.innerHTML = `
+                    <p>${item.name} - $${item.price.toFixed(2)}</p>
+                    <button class="btn btn-danger" onclick="removeFromCart(${item.id})">Remove</button>
+                `; // Set cart item content
+                cartItemsContainer.appendChild(cartItem); // Append cart item to cart items container
+            });
+            cartTotalElement.textContent = total.toFixed(2); // Set total price text
+            cartSection.style.display = cart.length > 0 ? 'block' : 'none'; // Show or hide cart section based on cart length
+        }
+
+        window.removeFromCart = function(id) { // Remove from cart function
+            const index = cart.findIndex(item => item.id === id); // Find index of item to remove
+            if (index > -1) { // Check if item is found
+                cart.splice(index, 1); // Remove item from cart array
+                updateCart(); // Update cart UI
+            }
+        };
+
+        document.querySelectorAll('.menu_btn').forEach(button => { // Add event listeners to "Order Now" buttons
+            button.addEventListener('click', (event) => { // Handle button click
+                event.preventDefault(); // Prevent default action
+                const productCard = event.target.closest('.menu_card'); // Get product card element
+                const productName = productCard.querySelector('h2').textContent; // Get product name
+                const productPrice = productCard.querySelector('h3').textContent.replace('$', ''); // Get product price
+                addToCart(productName, productPrice); // Add product to cart
+            });
+        });
+
+        document.getElementById('checkoutBtn').addEventListener('click', () => { // Checkout button event
+            alert('Proceeding to checkout!'); // Display checkout alert
+        });
+
+        document.getElementById('cartIcon').addEventListener('click', () => { // Show cart section when cart icon is clicked
+            cartSection.style.display = 'block'; // Show cart section
+            window.scrollTo({ // Scroll to cart section
+                top: cartSection.offsetTop, // Set scroll position
+                behavior: 'smooth' // Set scroll behavior
+            });
+        });
+
+        closeCartBtn.addEventListener('click', () => { // Close cart section when close button is clicked
+            cartSection.style.display = 'none'; // Hide cart section
+        });
+    });
+</script>
+
+<!-- Account Management Section -->
+<div class="account" id="Account">
+    <h1>Account <span>Management</span></h1> <!-- Account management section heading -->
+    <div class="account_form">
+        <form id="registrationForm"> <!-- Registration form -->
+            <div class="input">
+                <p>Email</p>
+                <input type="email" id="registerEmail" placeholder="Your Email" required> <!-- Email input -->
+            </div>
+            <div class="input">
+                <p>Password</p>
+                <input type="password" id="registerPassword" placeholder="Your Password" required> <!-- Password input -->
+            </div>
+            <button type="submit" class="btn btn-secondary">Register</button> <!-- Register button -->
+        </form>
+    </div>
+
+    <div class="account_table">
+        <h2>User Profiles</h2> <!-- User profiles heading -->
+        <table id="userTable" class="table">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- User profiles will be displayed here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script> <!-- JavaScript for account management functionality -->
+    document.addEventListener('DOMContentLoaded', () => { // Event listener for DOMContentLoaded
+        const registrationForm = document.getElementById('registrationForm'); // Get registration form element
+        const loginForm = document.getElementById('login-form'); // Get login form element
+        const userTableBody = document.getElementById('userTable').querySelector('tbody'); // Get user table body
+
+        loadUserProfiles(); // Load saved user profiles from local storage
+
+        registrationForm.addEventListener('submit', (e) => { // Handle registration form submission
+            e.preventDefault(); // Prevent default form submission
+
+            const email = document.getElementById('registerEmail').value; // Get email
+            const password = document.getElementById('registerPassword').value; // Get password
+
+            const userProfile = { // Create a new user profile object
+                email,
+                password,
+                id: Date.now() // Generate unique ID
+            };
+
+            saveUserProfile(userProfile); // Save user profile to local storage
+            displayUserProfile(userProfile); // Display user profile in user table
+            registrationForm.reset(); // Reset the form
+        });
+
+        loginForm.addEventListener('submit', (e) => { // Handle login form submission
+            e.preventDefault(); // Prevent default form submission
+
+            const email = document.getElementById('login-email').value; // Get email
+            const password = document.getElementById('login-password').value; // Get password
+
+            const profiles = JSON.parse(localStorage.getItem('userProfiles')) || []; // Get saved user profiles or empty array
+            const user = profiles.find(profile => profile.email === email && profile.password === password); // Find matching user profile
+
+            if (user) { // Check if user is found
+                alert('Login successful!'); // Display login success message
+            } else {
+                alert('Invalid email or password.'); // Display login error message
+            }
+            loginForm.reset(); // Reset the form
+        });
+
+        function loadUserProfiles() { // Load user profiles from local storage
+            const profiles = JSON.parse(localStorage.getItem('userProfiles')) || []; // Get saved user profiles or empty array
+            profiles.forEach(profile => displayUserProfile(profile)); // Display each saved user profile
+        }
+
+        function saveUserProfile(profile) { // Save a user profile to local storage
+            const profiles = JSON.parse(localStorage.getItem('userProfiles')) || []; // Get saved user profiles or empty array
+            profiles.push(profile); // Add new user profile to array
+            localStorage.setItem('userProfiles', JSON.stringify(profiles)); // Save updated array to local storage
+        }
+
+        function displayUserProfile(profile) { // Display a user profile in the user table
+            const row = document.createElement('tr'); // Create a new tr element
+            row.dataset.id = profile.id; // Set data-id attribute
+
+            const emailCell = document.createElement('td'); // Create a new td element for email
+            emailCell.textContent = profile.email; // Set email text
+
+            const actionsCell = document.createElement('td'); // Create a new td element for actions
+
+            const deleteButton = document.createElement('button'); // Create a new button element for deleting profile
+            deleteButton.textContent = 'Delete'; // Set delete button text
+            deleteButton.className = 'btn btn-secondary'; // Add class to delete button
+            deleteButton.addEventListener
+
+('click', () => deleteUserProfile(profile.id, row)); // Add click event listener to delete button
+
+            actionsCell.appendChild(deleteButton); // Append delete button to actions cell
+
+            row.appendChild(emailCell); // Append email cell to row
+            row.appendChild(actionsCell); // Append actions cell to row
+
+            userTableBody.appendChild(row); // Append row to user table body
+        }
+
+        function deleteUserProfile(id, row) { // Delete a user profile from local storage and UI
+            let profiles = JSON.parse(localStorage.getItem('userProfiles')) || []; // Get saved user profiles or empty array
+            profiles = profiles.filter(profile => profile.id !== id); // Filter out the profile to delete
+            localStorage.setItem('userProfiles', JSON.stringify(profiles)); // Save updated array to local storage
+            userTableBody.removeChild(row); // Remove row from user table body
+        }
+    });
+</script>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer_main">
+
+        <div class="footer_tag">
+            <h2>Location</h2> <!-- Footer location heading -->
+            <p>USA</p>
+            <p>UK</p>
+            <p>Japan</p>
+            <p>Italy</p>
+            <p>Germany</p>
+            <p>South Africa</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>Quick Link</h2> <!-- Footer quick links heading -->
+            <p>Home</p>
+            <p>About</p>
+            <p>Menu</p>
+            <p>Gallery</p>
+            <p>Blog</p>
+            <p>Review</p>
+            <p>Order</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>Contact Us</h2> <!-- Footer contact information heading -->
+            <p>+44 12 3456 789</p>
+            <p>+44 25 5568 456</p>
+            <p>CrustWorthy@gmail.com</p>
+            <p>Crust_Support@gmail.com</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>Our Service</h2> <!-- Footer services heading -->
+            <p>Fast Delivery</p>
+            <p>Easy Payments</p>
+            <p>24 x 7 Service</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>Follow Us!</h2> <!-- Footer social media heading -->
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+
+    </div>
+
+    <p class="end">Designed by<span><i class="fa-solid fa-face-grin"></i>TNK Technologies</span></p> <!-- Footer end note -->
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+SDAq2YveT90/ZtbpUJ2fAZCy5zY27o+8jIcqkfxJg2P5zUn2F4RxifTRGfPZgP" crossorigin="anonymous"></script> <!-- Popper.js for Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-QQfmy+N6gD3A1gf5gyg42E7Ed6HovZOqVrJ4tG+tPiLTkjT6rJRZ5iIol7Ytjcfm" crossorigin="anonymous"></script> <!-- Bootstrap JavaScript -->
+
+<script> <!-- JavaScript for additional cart functionality -->
+    document.addEventListener('DOMContentLoaded', () => { // Event listener for DOMContentLoaded
+        const cart = []; // Initialize empty cart array
+        const cartSection = document.getElementById('cart'); // Get cart section element
+        const cartItemsContainer = document.querySelector('.cart-items'); // Get cart items container
+        const cartTotalElement = document.getElementById('cartTotal'); // Get cart total element
+        const closeCartBtn = document.getElementById('closeCartBtn'); // Get close cart button
+
+        function addToCart(productName, productPrice) { // Add to cart function
+            const product = { name: productName, price: parseFloat(productPrice), id: Date.now() }; // Create product object
+            cart.push(product); // Add product to cart array
+            updateCart(); // Update cart UI
+        }
+
+        function updateCart() { // Update cart UI
+            cartItemsContainer.innerHTML = ''; // Clear existing items
+            let total = 0; // Initialize total price
+            cart.forEach(item => { // Iterate over each cart item
+                total += item.price; // Add item price to total
+                const cartItem = document.createElement('div'); // Create a new div element for cart item
+                cartItem.classList.add('cart-item'); // Add class to cart item
+                cartItem.innerHTML = `
+                    <p>${item.name} - $${item.price.toFixed(2)}</p>
+                    <button class="btn btn-danger" onclick="removeFromCart(${item.id})">Remove</button>
+                `; // Set cart item content
+                cartItemsContainer.appendChild(cartItem); // Append cart item to cart items container
+            });
+            cartTotalElement.textContent = total.toFixed(2); // Set total price text
+            cartSection.style.display = cart.length > 0 ? 'block' : 'none'; // Show or hide cart section based on cart length
+        }
+
+        window.removeFromCart = function(id) { // Remove from cart function
+            const index = cart.findIndex(item => item.id === id); // Find index of item to remove
+            if (index > -1) { // Check if item is found
+                cart.splice(index, 1); // Remove item from cart array
+                updateCart(); // Update cart UI
+            }
+        };
+
+        document.querySelectorAll('.menu_btn').forEach(button => { // Add event listeners to "Order Now" buttons
+            button.addEventListener('click', (event) => { // Handle button click
+                event.preventDefault(); // Prevent default action
+                const productCard = event.target.closest('.menu_card'); // Get product card element
+                const productName = productCard.querySelector('h2').textContent; // Get product name
+                const productPrice = productCard.querySelector('h3').textContent.replace('$', ''); // Get product price
+                addToCart(productName, productPrice); // Add product to cart
+            });
+        });
+
+        document.getElementById('checkoutBtn').addEventListener('click', () => { // Checkout button event
+            alert('Proceeding to checkout!'); // Display checkout alert
+        });
+
+        document.getElementById('cartIcon').addEventListener('click', () => { // Show cart section when cart icon is clicked
+            cartSection.style.display = 'block'; // Show cart section
+            window.scrollTo({ // Scroll to cart section
+                top: cartSection.offsetTop, // Set scroll position
+                behavior: 'smooth' // Set scroll behavior
+            });
+        });
+
+        closeCartBtn.addEventListener('click', () => { // Close cart section when close button is clicked
+            cartSection.style.display = 'none'; // Hide cart section
+        });
+    });
+</script>
+
+<script>
+    // JavaScript for Go Back button functionality
+    document.getElementById('goBackButton').addEventListener('click', function() { // Add click event listener to Go Back button
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top of the page smoothly
+    });
+</script>
+
+</body>
+</html>
+

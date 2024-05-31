@@ -1,0 +1,1742 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+ }
+
+
+ /* Ensure the container flexes properly */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 20px; /* Adjust the padding as needed */
+}
+
+.men_text {
+    flex: 1;
+    min-width: 300px; /* Adjust the minimum width as needed */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main_image {
+    flex: 1;
+    min-width: 200px; /* Adjust the minimum width as needed */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main_image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+    .men_text, .main_image {
+        text-align: center;
+    }
+}
+
+ 
+ 
+ html{
+    scroll-behavior: smooth;
+ }
+ 
+ 
+ section{
+    width: 100%;
+    height: 100vh;
+ }
+ 
+ 
+ section nav{
+    display: flex; /*use flex box layout */
+    justify-content: space-around; /* Distribute items evenly with space around */
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1000; /* Ensure it is above other content */
+ }
+ 
+ 
+ section nav .logo img{
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+ }
+ 
+ 
+ section nav ul{
+    list-style: none;/* Remove default list styling */
+ }
+ 
+ 
+ section nav ul li{
+    display: inline-block;/* Display items inline */
+    margin: 0 15px;/* Horizontal margin */
+ }
+ 
+ 
+ section nav ul li a{
+    text-decoration: none;/* Remove default underline */
+    color: #000;/* Black text color */
+    font-weight: 500;; /* Medium font weight */
+    font-size: 17px;
+    transition: 0.1s;
+ }
+ 
+ 
+/* Underline effect for navigation links */
+section nav ul li a::after {
+    content: ''; /* Empty content */
+    width: 0; /* Initial width */
+    height: 2px; /* Height of underline */
+    background: grey; /* Underline color */
+    display: block; /* Display as block */
+    transition: 0.2s linear; /* Smooth transition */
+}
+
+
+/* Hover effect to expand underline */
+section nav ul li a:hover::after {
+    width: 100%; /* Full width underline on hover */
+}
+
+
+/* Hover effect to change link color */
+section nav ul li a:hover {
+    color: grey; /* Change text color on hover */
+}
+
+
+/* Icon styles in the navigation bar */
+section nav .icon i {
+    font-size: 18px; /* Icon font size */
+    color: #000; /* Icon color */
+    margin: 0 5px; /* Horizontal margin */
+    cursor: pointer; /* Show pointer cursor */
+    transition: 0.3s; /* Transition effect */
+}
+
+
+/* Hover effect for icons */
+section nav .icon i:hover {
+    color: grey; /* Change icon color on hover */
+}
+
+
+/* Main section container styles */
+section .main {
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-around; /* Distribute items evenly */
+    position: relative; /* Relative positioning */
+    top: 130px; /* Positioning adjustment */
+}
+
+
+/* Main heading styles */
+section .main .men_text h1 {
+    font-size: 60px; /* Font size */
+    position: relative; /* Relative positioning */
+    top: -90px; /* Positioning adjustment */
+    left: 20px; /* Positioning adjustment */
+}
+
+
+/* Span styles inside main heading */
+section .main .men_text h1 span {
+    margin-left: 15px; /* Left margin */
+    color: grey; /* Text color */
+    font-family: mv boli; /* Font family */
+    line-height: 22px; /* Line height */
+    font-size: 70px; /* Font size */
+}
+
+
+/* Main image styles */
+section .main .main_image img {
+    width: 500px; /* Image width */
+    position: relative; /* Relative positioning */
+    left: 70px; /* Positioning adjustment */
+}
+
+
+/* Paragraph styles */
+section p {
+    width: 650px; /* Paragraph width */
+    text-align: justify; /* Justify text */
+    position: relative; /* Relative positioning */
+    left: 123px; /* Positioning adjustment */
+    bottom: 120px; /* Positioning adjustment */
+    line-height: 22px; /* Line height */
+}
+
+
+/* Button container styles */
+section .main_btn {
+    background: grey; /* Background color */
+    position: relative; /* Relative positioning */
+    left: 123px; /* Positioning adjustment */
+    bottom: 30px; /* Positioning adjustment */
+    width: 150px; /* Button width */
+    cursor: pointer; /* Show pointer cursor */
+    padding: 12px 25px; /* Padding */
+}
+
+
+/* Button link styles */
+section .main_btn a {
+    color: #fff; /* Text color */
+    margin-right: 5px; /* Right margin */
+    text-decoration: none; /* Remove underline */
+}
+
+
+/* Button icon styles */
+section .main_btn i {
+    color: #fff; /* Icon color */
+    transition: 0.3s; /* Transition effect */
+}
+
+
+/* Hover effect for button icon */
+section .main_btn:hover i {
+    transform: translateX(7px); /* Move icon on hover */
+}
+
+
+
+ /*About*/
+ 
+ /* About section styles */
+.about {
+   width: 100%; /* Full width of the viewport */
+   height: 100vh; /* Full height of the viewport */
+   padding: 70px 0; /* 70px padding on the top and bottom */
+}
+
+/* Main container inside the about section */
+.about .about_main {
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+   justify-content: space-around; /* Space items evenly with space around them */
+}
+
+/* About section image styles */
+.about .about_main .image img {
+   width: 500px; /* Set image width to 500px */
+   position: relative; /* Relative positioning */
+   top: 70px; /* Move image down by 70px */
+}
+
+/* Span styles inside the about section heading */
+.about .about_main .about_text h1 span {
+   color: grey; /* Set text color to grey */
+   margin-right: 15px; /* Add 15px right margin */
+   font-family: mv boli; /* Set font family to 'mv boli' */
+}
+
+/* About section heading styles */
+.about .about_main .about_text h1 {
+   font-size: 55px; /* Set font size to 55px */
+   position: relative; /* Relative positioning */
+   bottom: 50px; /* Move heading up by 50px */
+}
+
+/* About section subheading styles */
+.about .about_main .about_text h3 {
+   font-size: 30px; /* Set font size to 30px */
+   margin: 0 0 50px 0; /* Set top margin to 0 and bottom margin to 50px */
+}
+
+/* About section paragraph styles */
+.about .about_main .about_text p {
+   width: 650px; /* Set paragraph width to 650px */
+   text-align: justify; /* Justify text */
+   margin-right: 30px; /* Add 30px right margin */
+   line-height: 22px; /* Set line height to 22px */
+}
+
+/* About section button styles */
+.about .about_btn {
+   background: grey; /* Set background color to grey */
+   padding: 12px 25px; /* Add 12px top/bottom and 25px left/right padding */
+   text-decoration: none; /* Remove underline from text */
+   color: #fff; /* Set text color to white */
+   position: relative; /* Relative positioning */
+   left: 55%; /* Move button to the left by 55% */
+   bottom: 30px; /* Move button up by 30px */
+}
+
+ 
+ 
+ 
+ /*Menu*/
+ 
+ 
+ /* Menu section styles */
+.menu {
+   width: 100%; /* Full width of the viewport */
+   padding: 70px 0; /* 70px padding on the top and bottom */
+}
+
+/* Menu section heading styles */
+.menu h1 {
+   font-size: 55px; /* Set font size to 55px */
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+   justify-content: center; /* Center items horizontally */
+   margin-bottom: 30px; /* 30px bottom margin */
+}
+
+/* Span styles inside the menu section heading */
+.menu h1 span {
+   color: grey; /* Set text color to grey */
+   margin-left: 15px; /* Add 15px left margin */
+   font-family: mv boli; /* Set font family to 'mv boli' */
+}
+
+/* Underline effect for menu heading */
+.menu h1 span::after {
+   content: ''; /* Empty content */
+   width: 100%; /* Full width */
+   height: 2px; /* Height of underline */
+   background: grey; /* Underline color */
+   display: block; /* Display as block */
+   position: relative; /* Relative positioning */
+   bottom: 15px; /* Move underline up by 15px */
+}
+
+/* Menu items container styles */
+.menu .menu_box {
+   width: 95%; /* Container width */
+   margin: 0 auto; /* Center horizontally */
+   display: grid; /* Use grid layout */
+   grid-template-columns: 1fr 1fr 1fr 1fr; /* Four equal columns */
+   grid-gap: 15px; /* 15px gap between items */
+}
+
+/* Individual menu item card styles */
+.menu .menu_box .menu_card {
+   width: 325px; /* Card width */
+   height: 480px; /* Card height */
+   padding-top: 10px; /* 10px top padding */
+   margin-bottom: 20px; /* 20px bottom margin */
+   box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Add shadow for depth */
+}
+
+/* Menu item image container styles */
+.menu .menu_box .menu_card .menu_image {
+   width: 300px; /* Container width */
+   height: 245px; /* Container height */
+   margin: 0 auto; /* Center horizontally */
+   overflow: hidden; /* Hide overflow */
+}
+
+/* Menu item image styles */
+.menu .menu_box .menu_card .menu_image img {
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   object-fit: cover; /* Cover the container */
+   object-position: center; /* Center the image */
+   transition: 0.3s; /* Transition effect */
+}
+
+/* Hover effect for menu item image */
+.menu .menu_box .menu_card .menu_image:hover img {
+   transform: scale(1.1); /* Scale up image on hover */
+}
+
+/* Small card styles */
+.menu .menu_box .menu_card .small_card {
+   width: 45px; /* Card width */
+   height: 45px; /* Card height */
+   float: right; /* Float to the right */
+   position: relative; /* Relative positioning */
+   top: -240px; /* Move card up by 240px */
+   right: -8px; /* Move card left by 8px */
+   opacity: 0; /* Initial opacity */
+   border-radius: 7px; /* Rounded corners */
+   transition: 0.3s; /* Transition effect */
+}
+
+/* Hover effect for small card */
+.menu .menu_box .menu_card:hover .small_card {
+   position: relative; /* Relative positioning */
+   top: -240px; /* Move card up by 240px */
+   right: 20px; /* Move card left by 20px */
+   opacity: 1; /* Show card on hover */
+}
+
+/* Small card icon styles */
+.menu .menu_box .menu_card .small_card i {
+   font-size: 25px; /* Icon font size */
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+   justify-content: center; /* Center items horizontally */
+   line-height: 50px; /* Line height */
+   color: #000; /* Icon color */
+   cursor: pointer; /* Show pointer cursor */
+   text-shadow: 0 0 6px #000; /* Add shadow */
+   transition: 0.2s; /* Transition effect */
+}
+
+/* Hover effect for small card icon */
+.menu .menu_box .menu_card .small_card i:hover {
+   color: grey; /* Change icon color on hover */
+}
+
+/* Menu item name styles */
+.menu .menu_box .menu_card .menu_info h2 {
+   width: 60%; /* Name width */
+   text-align: center; /* Center text */
+   margin: 10px auto; /* Vertical and horizontal margin */
+   font-size: 25px; /* Font size */
+   color: grey; /* Text color */
+}
+
+/* Menu item description styles */
+.menu .menu_box .menu_card .menu_info p {
+   text-align: center; /* Center text */
+   margin-top: 8px; /* Top margin */
+   line-height: 21px; /* Line height */
+}
+
+/* Menu item price styles */
+.menu .menu_box .menu_card .menu_info h3 {
+   text-align: center; /* Center text */
+   margin-top: 10px; /* Top margin */
+}
+
+/* Menu item icon styles */
+.menu .menu_box .menu_card .menu_info .menu_icon {
+   color: grey; /* Icon color */
+   text-align: center; /* Center text */
+   margin: 10px 0; /* Vertical margin */
+}
+
+/* Menu item button styles */
+.menu .menu_box .menu_card .menu_info .menu_btn {
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+   justify-content: center; /* Center items horizontally */
+   text-decoration: none; /* Remove underline */
+   color: white; /* Text color */
+   background: #000; /* Background color */
+   padding: 8px 10px; /* Padding */
+   margin: 0 80px; /* Horizontal margin */
+   transition: 0.3s; /* Transition effect */
+}
+ 
+ 
+ 
+ /*Gallery*/
+ 
+ 
+ .gallery {
+   width: 100%; /* Full width of the viewport */
+   padding: 70px 0; /* 70px padding on the top and bottom */
+}
+
+/* Gallery section heading styles */
+.gallery h1 {
+   font-size: 55px; /* Set font size to 55px */
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+   justify-content: center; /* Center items horizontally */
+}
+
+/* Span styles inside the gallery section heading */
+.gallery h1 span {
+   margin-left: 15px; /* Add 15px left margin */
+   color: grey; /* Set text color to grey */
+   font-family: mv boli; /* Set font family to 'mv boli' */
+}
+
+/* Underline effect for gallery heading */
+.gallery h1 span::after {
+   content: ''; /* Empty content */
+   width: 100%; /* Full width */
+   height: 2px; /* Height of underline */
+   background: grey; /* Underline color */
+   display: block; /* Display as block */
+   position: relative; /* Relative positioning */
+   bottom: 15px; /* Move underline up by 15px */
+}
+
+/* Gallery images container styles */
+.gallery .gallery_image_box {
+   width: 95%; /* Container width */
+   margin: 10px auto; /* Center horizontally and add 10px top margin */
+   display: grid; /* Use grid layout */
+   grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+   grid-gap: 10px; /* 10px gap between items */
+}
+
+/* Individual gallery image container styles */
+.gallery .gallery_image_box .gallery_image {
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+   justify-content: center; /* Center items horizontally */
+   background: black; /* Background color */
+}
+
+/* Gallery image styles */
+.gallery .gallery_image_box .gallery_image img {
+   width: 100%; /* Full width */
+   transition: .3s; /* Transition effect */
+}
+
+/* Hover effect for gallery image */
+.gallery .gallery_image_box .gallery_image:hover img {
+   opacity: 0.4; /* Reduce opacity on hover */
+}
+
+/* Gallery image heading styles */
+.gallery .gallery_image_box .gallery_image h3 {
+   position: absolute; /* Absolute positioning */
+   font-size: 35px; /* Font size */
+   margin-bottom: 130px; /* Bottom margin */
+   color: grey; /* Text color */
+   font-family: polo; /* Font family */
+   z-index: 5; /* Ensure it's above other content */
+   opacity: 0; /* Initial opacity */
+   transition: 0.3s; /* Transition effect */
+}
+
+/* Hover effect for gallery image heading */
+.gallery .gallery_image_box .gallery_image:hover h3 {
+   opacity: 1; /* Show heading on hover */
+}
+
+/* Gallery image paragraph styles */
+.gallery .gallery_image_box .gallery_image p {
+   position: absolute; /* Absolute positioning */
+   width: 400px; /* Paragraph width */
+   margin-top: 30px; /* Top margin */
+   text-align: center; /* Center text */
+   color: white; /* Text color */
+   line-height: 22px; /* Line height */
+   opacity: 0; /* Initial opacity */
+   z-index: 5; /* Ensure it's above other content */
+   transition: 0.3s; /* Transition effect */
+}
+
+/* Hover effect for gallery image paragraph */
+.gallery .gallery_image_box .gallery_image:hover p {
+   opacity: 1; /* Show paragraph on hover */
+}
+
+/* Gallery button styles */
+.gallery .gallery_image_box .gallery_image .gallery_btn {
+   position: absolute; /* Absolute positioning */
+   margin-top: 180px; /* Top margin */
+   color: #000; /* Text color */
+   background: grey; /* Background color */
+   padding: 7px 25px; /* Padding */
+   text-decoration: none; /* Remove underline */
+   opacity: 0; /* Initial opacity */
+   transform: translateY(45px); /* Initial transform */
+   z-index: 5; /* Ensure it's above other content */
+   transition: 0.3s; /* Transition effect */
+}
+
+/* Hover effect for gallery button */
+.gallery .gallery_image_box .gallery_image:hover .gallery_btn {
+   opacity: 1; /* Show button on hover */
+   transform: translateY(0); /* Reset transform */
+}
+ 
+ 
+
+ /*Review*/
+ 
+ /* Review section styles */
+.review {
+   width: 100%; /* Full width of the viewport */
+   height: 100vh; /* Full height of the viewport */
+   padding: 70px 0; /* 70px padding on the top and bottom */
+}
+
+/* Review section heading styles */
+.review h1 {
+   font-size: 55px; /* Set font size to 55px */
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+   justify-content: center; /* Center items horizontally */
+}
+
+/* Span styles inside the review section heading */
+.review h1 span {
+   margin-left: 15px; /* Add 15px left margin */
+   color: grey; /* Set text color to grey */
+   font-family: mv boli; /* Set font family to 'mv boli' */
+}
+
+/* Underline effect for review heading */
+.review h1 span::after {
+   content: ''; /* Empty content */
+   width: 100%; /* Full width */
+   height: 2px; /* Height of underline */
+   background: grey; /* Underline color */
+   position: relative; /* Relative positioning */
+   bottom: 15px; /* Move underline up by 15px */
+   display: block; /* Display as block */
+}
+
+/* Review cards container styles */
+.review .review_box {
+   width: 95%; /* Container width */
+   margin: 70px auto; /* Center horizontally and add 70px top margin */
+   display: flex; /* Use flexbox layout */
+}
+
+/* Individual review card styles */
+.review .review_box .review_card {
+   width: 350px; /* Card width */
+   height: 535px; /* Card height */
+   box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* Add shadow for depth */
+   border-radius: 8px; /* Rounded corners */
+   padding: 8px 20px; /* Padding */
+   margin: 0 8px; /* Horizontal margin */
+}
+
+/* Review card profile image container styles */
+.review .review_box .review_card .review_profile {
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+   justify-content: center; /* Center items horizontally */
+   position: relative; /* Relative positioning */
+   transition: 0.3s; /* Transition effect */
+}
+
+/* Hover effect for review card profile image */
+.review .review_box .review_card:hover .review_profile {
+   transform: translateY(-60px); /* Move profile image up by 60px */
+}
+
+/* Review profile image styles */
+.review .review_box .review_card .review_profile img {
+   width: 180px; /* Image width */
+   height: 180px; /* Image height */
+   object-fit: cover; /* Cover the container */
+   object-position: center; /* Center the image */
+   border-radius: 50%; /* Make image circular */
+   border: 5px solid #cccccc; /* Add border */
+}
+
+/* Review text container styles */
+.review .review_box .review_card .review_text {
+   text-align: center; /* Center text */
+}
+
+/* Reviewer's name styles */
+.review .review_box .review_card .review_text .name {
+   color: #000; /* Text color */
+   transition: 0.3s; /* Transition effect */
+}
+
+/* Hover effect for reviewer's name */
+.review .review_box .review_card:hover .review_text .name {
+   transform: translateY(-50px); /* Move name up by 50px */
+}
+
+/* Review icon styles */
+.review .review_box .review_card .review_text .review_icon {
+   color: grey; /* Icon color */
+   transition: 0.3s; /* Transition effect */
+}
+
+/* Hover effect for review icon */
+.review .review_box .review_card:hover .review_text .review_icon {
+   transform: translateY(-30px); /* Move icon up by 30px */
+}
+
+/* Review social media icons styles */
+.review .review_box .review_card .review_text .review_social i {
+   margin: 5px 1px; /* Margins */
+   font-size: 15px; /* Font size */
+   opacity: 0; /* Initial opacity */
+   cursor: pointer; /* Show pointer cursor */
+   transition: 0.3s; /* Transition effect */
+}
+
+/* Hover effect for review social media icons */
+.review .review_box .review_card:hover .review_text .review_social i {
+   opacity: 1; /* Show icon on hover */
+   transform: translateY(-8px); /* Move icon up by 8px */
+}
+
+/* Review text paragraph styles */
+.review .review_box .review_card .review_text p {
+   text-align: center; /* Center text */
+   line-height: 22px; /* Line height */
+   transition: 0.3s; /* Transition effect */
+}
+
+/* Hover effect for review text paragraph */
+.review .review_box .review_card:hover .review_text p {
+   margin-top: 5px; /* Add top margin on hover */
+}
+
+/* Order section styles */
+.order {
+   width: 100%; /* Full width of the viewport */
+   height: 100vh; /* Full height of the viewport */
+   padding: 70px 0; /* 70px padding on the top and bottom */
+   background-image: url(image/bg2.jpg); /* Background image */
+   background-size: cover; /* Cover the container */
+   background-position: center; /* Center the background image */
+}
+
+/* Order section heading styles */
+.order h1 {
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+   justify-content: center; /* Center items horizontally */
+   color: #000; /* Text color */
+   font-size: 55px; /* Font size */
+}
+
+/* Span styles inside the order section heading */
+.order h1 span {
+   color: grey; /* Text color */
+   margin-right: 15px; /* Add 15px right margin */
+   font-family: mv boli; /* Set font family to 'mv boli' */
+}
+
+/* Underline effect for order heading */
+.order h1 span::after {
+   content: ''; /* Empty content */
+   width: 100%; /* Full width */
+   height: 2px; /* Height of underline */
+   background: grey; /* Underline color */
+   display: block; /* Display as block */
+   position: relative; /* Relative positioning */
+   bottom: 15px; /* Move underline up by 15px */
+}
+
+/* Order main container styles */
+.order .order_main {
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+   justify-content: space-around; /* Distribute items evenly */
+}
+
+/* Order image styles */
+.order .order_main .order_image img {
+   width: 600px; /* Image width */
+}
+
+/* Order form container styles */
+.order .order_main form {
+   display: grid; /* Use grid layout */
+   grid-template-columns: 1fr 1fr; /* Two equal columns */
+   grid-gap: 0 10px; /* 10px gap between columns */
+}
+
+/* Order form label styles */
+.order .order_main form .input p {
+   line-height: 25px; /* Line height */
+}
+
+/* Order form input container styles */
+.order .order_main form .input {
+   margin: 5px; /* Margin */
+}
+
+/* Order form input styles */
+.order .order_main form .input input {
+   width: 300px; /* Input width */
+   height: 35px; /* Input height */
+   padding: 0 10px; /* Horizontal padding */
+   border: 2px solid #cccccc; /* Border color and width */
+   background: #eeeeee; /* Background color */
+   outline: none; /* Remove outline */
+   border-radius: 3px; /* Rounded corners */
+}
+
+/* Focus effect for order form inputs */
+.order .order_main form .input input:focus {
+   border: 2px solid grey; /* Change border color on focus */
+}
+
+/* Order form submit button styles */
+.order .order_main form .order_btn {
+   padding: 10px 0; /* Vertical padding */
+   background: grey; /* Background color */
+   color: white; /* Text color */
+   width: 40%; /* Button width */
+   text-align: center; /* Center text */
+   margin-top: 20px; /* Top margin */
+   text-decoration: none; /* Remove underline */
+}
+
+/* Team section styles */
+.team {
+   width: 100%; /* Full width of the viewport */
+   height: 90vh; /* 90% of the viewport height */
+   background-image: url(image/bg1.jpg); /* Background image */
+   background-size: cover; /* Cover the container */
+   background-position: center; /* Center the background image */
+}
+
+/* Team section heading styles */
+.team h1 {
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+   justify-content: center; /* Center items horizontally */
+   font-size: 55px; /* Font size */
+   margin-bottom: 30px; /* 30px bottom margin */
+}
+
+/* Span styles inside the team section heading */
+.team h1 span {
+   color: grey; /* Text color */
+   margin-left: 15px; /* Add 15px left margin */
+   font-family: mv boli; /* Set font family to 'mv boli' */
+}
+
+/* Underline effect for team heading */
+.team h1 span::after {
+   content: ''; /* Empty content */
+   width: 100%; /* Full width */
+   height: 2px; /* Height of underline */
+   background: grey; /* Underline color */
+   display: block; /* Display as block */
+   position: relative; /* Relative positioning */
+   bottom: 15px; /* Move underline up by 15px */
+}
+
+/* Team profiles container styles */
+.team .team_box {
+   width: 95%; /* Container width */
+   margin: 0 auto; /* Center horizontally */
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+   justify-content: center; /* Center items horizontally */
+   position: relative; /* Relative positioning */
+   top: 13%; /* Move container down by 13% */
+}
+
+/* Individual team profile styles */
+.team .team_box .profile {
+   width: 320px; /* Profile width */
+   height: 320px; /* Profile height */
+   border-radius: 50%; /* Make profile circular */
+   margin: 0 15px; /* Horizontal margin */
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+   justify-content: center; /* Center items horizontally */
+   position: relative; /* Relative positioning */
+   box-shadow: 0 0 8px rgba(0,0,0,0.5); /* Add shadow for depth */
+   transition: 0.4s; /* Transition effect */
+}
+
+/* Hover effect for team profile */
+.team .team_box .profile:hover {
+   border-radius: 20px; /* Change border radius */
+   height: 320px; /* Set height */
+}
+
+/* Team profile image styles */
+.team .team_box .profile img {
+   width: 250px; /* Image width */
+   height: 250px; /* Image height */
+   object-fit: cover; /* Cover the container */
+   object-position: center; /* Center the image */
+   border-radius: 50%; /* Make image circular */
+   cursor: pointer; /* Show pointer cursor */
+   box-shadow: 0 0 8px rgba(0,0,0,0.5); /* Add shadow for depth */
+   z-index: 2; /* Ensure it's above other content */
+   transition: 0.4s; /* Transition effect */
+}
+
+/* Hover effect for team profile image */
+.team .team_box .profile:hover img {
+   border-radius: 20px; /* Change border radius */
+   margin-top: -230px; /* Move image up by 230px */
+}
+
+/* Team profile info container styles */
+.team .team_box .profile .info {
+   position: absolute; /* Absolute positioning */
+   text-align: center; /* Center text */
+   top: 25%; /* Move container down by 25% */
+   transition: 0.4s; /* Transition effect */
+}
+
+/* Hover effect for team profile info container */
+.team .team_box .profile:hover .info {
+   top: 60%; /* Move container down by 60% */
+}
+
+/* Team profile name styles */
+.team .team_box .profile .info .name {
+   color: grey; /* Text color */
+   margin-bottom: 15px; /* Bottom margin */
+}
+
+/* Team profile bio styles */
+.team .team_box .profile .info .bio {
+   width: 70%; /* Bio width */
+   text-align: center; /* Center text */
+   margin: 0 auto 10px auto; /* Center horizontally and add 10px bottom margin */
+}
+
+/* Team profile social media icon styles */
+.team .team_box .profile .info .team_icon i {
+   margin: 10px 5px 5px 0; /* Margins */
+   cursor: pointer; /* Show pointer cursor */
+   transition: 0.3s; /* Transition effect */
+}
+
+/* Hover effect for team profile social media icon */
+.team .team_box .profile .info .team_icon i:hover {
+   color: grey; /* Change icon color on hover */
+}
+
+/* Footer styles */
+footer {
+   width: 100%; /* Full width of the viewport */
+   padding: 30px 0 0 20px; /* Padding */
+   background: #eeeeee; /* Background color */
+}
+
+/* Footer main container styles */
+footer .footer_main {
+   display: grid; /* Use grid layout */
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Five equal columns */
+}
+
+/* Footer tag container styles */
+footer .footer_main .footer_tag {
+   text-align: center; /* Center text */
+}
+
+/* Footer heading styles */
+footer .footer_main .footer_tag h2 {
+   color: #000; /* Text color */
+   margin-bottom: 25px; /* 25px bottom margin */
+   font-size: 30px; /* Font size */
+}
+
+/* Footer paragraph styles */
+footer .footer_main .footer_tag p {
+   margin: 10px 0; /* Vertical margin */
+}
+
+/* Footer icon styles */
+footer .footer_main .footer_tag i {
+   margin: 0 5px; /* Horizontal margin */
+   cursor: pointer; /* Show pointer cursor */
+}
+
+/* Hover effect for footer icon */
+footer .footer_main .footer_tag i:hover {
+   color: grey; /* Change icon color on hover */
+}
+
+/* Footer end container styles */
+footer .end {
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+   justify-content: center; /* Center items horizontally */
+   padding: 15px; /* Padding */
+}
+
+/* Footer end text styles */
+footer .end span {
+   color: grey; /* Text color */
+   margin-left: 10px; /* Add 10px left margin */
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+   width: 13px; /* Scrollbar width */
+}
+
+/* Custom scrollbar track styles */
+::-webkit-scrollbar-track {
+   border-radius: 15px; /* Rounded corners */
+   box-shadow: inset 0 0 5px rgba(0,0,0,0.5); /* Add shadow for depth */
+}
+
+/* Custom scrollbar thumb styles */
+::-webkit-scrollbar-thumb {
+   background: grey; /* Scrollbar thumb color */
+   border-radius: 15px; /* Rounded corners */
+}
+
+/* Blog section styles */
+.blog {
+   width: 100%; /* Full width of the viewport */
+   padding: 70px 0; /* 70px padding on the top and bottom */
+}
+
+/* Blog section heading styles */
+.blog h1 {
+   font-size: 55px; /* Set font size to 55px */
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+   justify-content: center; /* Center items horizontally */
+   margin-bottom: 30px; /* 30px bottom margin */
+}
+
+/* Span styles inside the blog section heading */
+.blog h1 span {
+   color: grey; /* Set text color to grey */
+   margin-left: 15px; /* Add 15px left margin */
+   font-family: mv boli; /* Set font family to 'mv boli' */
+}
+
+/* Blog form container styles */
+.blog .blog_form {
+   width: 80%; /* Container width */
+   margin: 0 auto; /* Center horizontally */
+   text-align: center; /* Center text */
+}
+
+/* Blog form input container styles */
+.blog .blog_form .input {
+   margin: 10px 0; /* Vertical margin */
+}
+
+/* Blog form label styles */
+.blog .blog_form .input p {
+   margin-bottom: 5px; /* 5px bottom margin */
+}
+
+/* Blog form input and textarea styles */
+.blog .blog_form .input input, .blog .blog_form .input textarea {
+   width: 100%; /* Full width */
+   padding: 10px; /* Padding */
+   border: 2px solid #ccc; /* Border color and width */
+   border-radius: 5px; /* Rounded corners */
+   outline: none; /* Remove outline */
+}
+
+/* Focus effect for blog form inputs */
+.blog .blog_form .input input:focus, .blog .blog_form .input textarea:focus {
+   border-color: grey; /* Change border color on focus */
+}
+
+/* Blog posts container styles */
+.blog .blog_posts {
+   width: 80%; /* Container width */
+   margin: 50px auto; /* Center horizontally and add 50px top margin */
+}
+
+/* Blog posts heading styles */
+.blog .blog_posts h2 {
+   text-align: center; /* Center text */
+   margin-bottom: 30px; /* 30px bottom margin */
+}
+
+/* Individual blog post styles */
+.blog .blog_posts .post {
+   padding: 20px; /* Padding */
+   border: 1px solid #ccc; /* Border color and width */
+   border-radius: 5px; /* Rounded corners */
+   margin-bottom: 20px; /* 20px bottom margin */
+}
+
+/* Blog post heading styles */
+.blog .blog_posts .post h3 {
+   margin-bottom: 10px; /* 10px bottom margin */
+}
+
+/* Blog post paragraph styles */
+.blog .blog_posts .post p {
+   text-align: justify; /* Justify text */
+   line-height: 1.6; /* Line height */
+}
+
+/* Blog form submit button styles */
+.blog .blog_form button {
+   background: grey; /* Background color */
+   color: white; /* Text color */
+   border: none; /* Remove border */
+   padding: 10px 20px; /* Padding */
+   cursor: pointer; /* Show pointer cursor */
+   border-radius: 5px; /* Rounded corners */
+   transition: 0.3s; /* Transition effect */
+}
+
+/* Hover effect for blog form submit button */
+.blog .blog_form button:hover {
+   background: darkgrey; /* Change background color on hover */
+}
+
+/* Additional styling for delete button in blog posts */
+.blog .blog_posts .post button {
+   background: grey; /* Background color */
+   color: white; /* Text color */
+   border: none; /* Remove border */
+   padding: 5px 10px; /* Padding */
+   cursor: pointer; /* Show pointer cursor */
+   border-radius: 5px; /* Rounded corners */
+   transition: 0.3s; /* Transition effect */
+   margin-top: 10px; /* Top margin */
+}
+
+/* Hover effect for delete button in blog posts */
+.blog .blog_posts .post button:hover {
+   background: darkgrey; /* Change background color on hover */
+}
+
+/* Review section form button styles */
+.review .review_form button {
+   background: grey; /* Background color */
+   color: white; /* Text color */
+   border: none; /* Remove border */
+   padding: 10px 20px; /* Padding */
+   cursor: pointer; /* Show pointer cursor */
+   border-radius: 5px; /* Rounded corners */
+   transition: 0.3s; /* Transition effect */
+}
+
+/* Hover effect for review form button */
+.review .review_form button:hover {
+   background: darkgrey; /* Change background color on hover */
+}
+
+/* Additional styling for delete button in review posts */
+.review .review_posts .post button {
+   background: grey; /* Background color */
+   color: white; /* Text color */
+   border: none; /* Remove border */
+   padding: 5px 10px; /* Padding */
+   cursor: pointer; /* Show pointer cursor */
+   border-radius: 5px; /* Rounded corners */
+   transition: 0.3s; /* Transition effect */
+   margin-top: 10px; /* Top margin */
+}
+
+/* Hover effect for delete button in review posts */
+.review .review_posts .post button:hover {
+   background: darkgrey; /* Change background color on hover */
+}
+
+/* Review star rating container styles */
+.review .stars {
+   display: flex; /* Use flexbox layout */
+}
+
+/* Review star icon styles */
+.review .stars i {
+   font-size: 24px; /* Icon font size */
+   color: grey; /* Icon color */
+   cursor: pointer; /* Show pointer cursor */
+   transition: 0.3s; /* Transition effect */
+}
+
+/* Hover and selected state for review star icons */
+.review .stars i:hover, .review .stars i.selected {
+   color: gold; /* Change icon color to gold */
+}
+
+/* Center the form and review posts container */
+.review {
+   display: flex; /* Use flexbox layout */
+   flex-direction: column; /* Column layout */
+   align-items: center; /* Vertically center items */
+   justify-content: center; /* Center items horizontally */
+   text-align: center; /* Center text */
+   padding: 50px 0; /* 50px padding on the top and bottom */
+}
+
+/* Adjust form width for better alignment */
+.review .review_form {
+   width: 80%; /* Form width */
+   max-width: 600px; /* Maximum width */
+   margin-bottom: 30px; /* 30px bottom margin */
+}
+
+/* Style form inputs and buttons */
+.review .review_form .input input, .review .review_form .input textarea {
+   width: 100%; /* Full width */
+   padding: 10px; /* Padding */
+   margin-bottom: 10px; /* 10px bottom margin */
+   border: 1px solid #ccc; /* Border color and width */
+   border-radius: 5px; /* Rounded corners */
+}
+
+/* Adjust the star rating container */
+.review .stars {
+   justify-content: center; /* Center items horizontally */
+   margin-bottom: 10px; /* 10px bottom margin */
+}
+
+/* Center the review posts */
+.review .review_posts {
+   width: 80%; /* Container width */
+   max-width: 600px; /* Maximum width */
+}
+
+/* Adjust each post for better display */
+.review .review_posts .post {
+   margin-bottom: 20px; /* 20px bottom margin */
+   padding: 20px; /* Padding */
+   border: 1px solid #ccc; /* Border color and width */
+   border-radius: 5px; /* Rounded corners */
+   background-color: #f9f9f9; /* Background color */
+   text-align: left; /* Left align text */
+}
+
+/* Review post heading styles */
+.review .review_posts .post h3 {
+   margin-top: 0; /* Remove top margin */
+}
+
+/* Review post star rating container styles */
+.review .review_posts .post .stars {
+   display: flex; /* Use flexbox layout */
+   justify-content: flex-start; /* Align items to the start */
+}
+
+/* Cart container styles */
+#cart {
+   display: none; /* Hide cart by default */
+   padding: 50px; /* Padding */
+   background-color: #f8f8f8; /* Background color */
+}
+
+/* Cart container styles */
+#cart .container {
+   max-width: 800px; /* Maximum width */
+   margin: 0 auto; /* Center horizontally */
+   text-align: center; /* Center text */
+}
+
+/* Cart items container styles */
+#cart-items {
+   margin: 20px 0; /* Vertical margin */
+}
+
+/* Individual cart item styles */
+#cart-items div {
+   display: flex; /* Use flexbox layout */
+   justify-content: space-between; /* Distribute items evenly */
+   padding: 10px; /* Padding */
+   border-bottom: 1px solid #ccc; /* Border color and width */
+}
+
+/* Checkout button styles */
+#checkout-btn {
+   background: grey; /* Background color */
+   color: white; /* Text color */
+   padding: 12px 25px; /* Padding */
+   text-decoration: none; /* Remove underline */
+   border: none; /* Remove border */
+   cursor: pointer; /* Show pointer cursor */
+}
+
+/* FAQ section styles */
+.faq {
+   padding: 50px 0; /* 50px padding on the top and bottom */
+   background: #f9f9f9; /* Background color */
+}
+
+/* FAQ section heading styles */
+.faq h1 {
+   font-size: 2.5em; /* Font size */
+   text-align: center; /* Center text */
+   margin-bottom: 20px; /* 20px bottom margin */
+}
+
+/* FAQ posts container styles */
+.faq_posts {
+   margin-bottom: 40px; /* 40px bottom margin */
+}
+
+/* Individual FAQ post styles */
+.faq_post {
+   background: #fff; /* Background color */
+   padding: 15px; /* Padding */
+   margin: 10px 0; /* Vertical margin */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* FAQ post heading styles */
+.faq_post h3 {
+   margin-bottom: 10px; /* 10px bottom margin */
+}
+
+/* FAQ post paragraph styles */
+.faq_post p {
+   margin-bottom: 10px; /* 10px bottom margin */
+}
+
+/* FAQ form heading styles */
+.faq_form h2 {
+   margin-bottom: 20px; /* 20px bottom margin */
+}
+
+/* FAQ form input container styles */
+.faq_form .input {
+   margin-bottom: 15px; /* 15px bottom margin */
+}
+
+/* FAQ form label styles */
+.faq_form .input p {
+   margin-bottom: 5px; /* 5px bottom margin */
+}
+
+/* FAQ form input and textarea styles */
+.faq_form .input input, .faq_form .input textarea {
+   width: 100%; /* Full width */
+   padding: 10px; /* Padding */
+   border: 1px solid #ccc; /* Border color and width */
+   border-radius: 5px; /* Rounded corners */
+}
+
+/* FAQ form submit button styles */
+.faq_form button {
+   background: grey; /* Background color */
+   color: white; /* Text color */
+   padding: 10px 20px; /* Padding */
+   border: none; /* Remove border */
+   border-radius: 5px; /* Rounded corners */
+   cursor: pointer; /* Show pointer cursor */
+}
+
+/* Contact section styles */
+.contact {
+   width: 100%; /* Full width of the viewport */
+   padding: 70px 0; /* 70px padding on the top and bottom */
+}
+
+/* Contact section heading styles */
+.contact h1 {
+   font-size: 55px; /* Set font size to 55px */
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+   justify-content: center; /* Center items horizontally */
+   margin-bottom: 30px; /* 30px bottom margin */
+}
+
+/* Span styles inside the contact section heading */
+.contact h1 span {
+   color: grey; /* Set text color to grey */
+   margin-left: 15px; /* Add 15px left margin */
+   font-family: mv boli; /* Set font family to 'mv boli' */
+}
+
+/* Underline effect for contact heading */
+.contact h1 span::after {
+   content: ''; /* Empty content */
+   width: 100%; /* Full width */
+   height: 2px; /* Height of underline */
+   background: grey; /* Underline color */
+   display: block; /* Display as block */
+   position: relative; /* Relative positioning */
+   bottom: 15px; /* Move underline up by 15px */
+}
+
+/* Contact main container styles */
+.contact_main {
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+   justify-content: space-around; /* Distribute items evenly */
+}
+
+/* Contact image styles */
+.contact_image img {
+   width: 600px; /* Image width */
+}
+
+/* Contact form container styles */
+.contact form {
+   display: grid; /* Use grid layout */
+   grid-template-columns: 1fr; /* Single column */
+   grid-gap: 10px; /* 10px gap between rows */
+}
+
+/* Contact form input container styles */
+.contact .input {
+   margin: 5px; /* Margin */
+}
+
+/* Contact form label styles */
+.contact .input p {
+   line-height: 25px; /* Line height */
+}
+
+/* Contact form input and textarea styles */
+.contact .input input, .contact .input textarea {
+   width: 300px; /* Input and textarea width */
+   padding: 10px; /* Padding */
+   border: 2px solid #cccccc; /* Border color and width */
+   background: #eeeeee; /* Background color */
+   outline: none; /* Remove outline */
+   border-radius: 3px; /* Rounded corners */
+}
+
+/* Focus effect for contact form inputs */
+.contact .input input:focus, .contact .input textarea:focus {
+   border: 2px solid grey; /* Change border color on focus */
+}
+
+/* Contact form submit button styles */
+.contact button {
+   background: grey; /* Background color */
+   color: white; /* Text color */
+   padding: 10px 20px; /* Padding */
+   border: none; /* Remove border */
+   border-radius: 3px; /* Rounded corners */
+   cursor: pointer; /* Show pointer cursor */
+   transition: background 0.3s ease; /* Transition effect */
+}
+
+/* Hover effect for contact form submit button */
+.contact button:hover {
+   background: darkgrey; /* Change background color on hover */
+}
+
+/* Account section styles */
+.account {
+   padding: 70px 0; /* 70px padding on the top and bottom */
+}
+
+/* Account section heading styles */
+.account h1 {
+   font-size: 55px; /* Set font size to 55px */
+   text-align: center; /* Center text */
+   margin-bottom: 30px; /* 30px bottom margin */
+}
+
+/* Span styles inside the account section heading */
+.account h1 span {
+   color: grey; /* Set text color to grey */
+   margin-left: 15px; /* Add 15px left margin */
+   font-family: mv boli; /* Set font family to 'mv boli' */
+}
+
+/* Account form container styles */
+.account .account_form {
+   display: flex; /* Use flexbox layout */
+   justify-content: center; /* Center items horizontally */
+   margin-bottom: 50px; /* 50px bottom margin */
+}
+
+/* Account form input container styles */
+.account .account_form .input {
+   margin: 10px; /* Margin */
+}
+
+/* Account form label styles */
+.account .account_form .input p {
+   margin-bottom: 5px; /* 5px bottom margin */
+}
+
+/* Account form input styles */
+.account .account_form .input input {
+   width: 300px; /* Input width */
+   height: 35px; /* Input height */
+   padding: 0 10px; /* Horizontal padding */
+   border: 2px solid #cccccc; /* Border color and width */
+   background: #eeeeee; /* Background color */
+   outline: none; /* Remove outline */
+   border-radius: 3px; /* Rounded corners */
+}
+
+/* Focus effect for account form inputs */
+.account .account_form .input input:focus {
+   border: 2px solid grey; /* Change border color on focus */
+}
+
+/* Account table container styles */
+.account .account_table {
+   display: flex; /* Use flexbox layout */
+   justify-content: center; /* Center items horizontally */
+   margin-top: 20px; /* 20px top margin */
+}
+
+/* Account table styles */
+.account .account_table table {
+   width: 80%; /* Table width */
+   border-collapse: collapse; /* Collapse borders */
+}
+
+/* Account table header and cell styles */
+.account .account_table th, .account .account_table td {
+   padding: 10px; /* Padding */
+   text-align: left; /* Left align text */
+   border: 1px solid #cccccc; /* Border color and width */
+}
+
+/* Account table header styles */
+.account .account_table th {
+   background: grey; /* Background color */
+   color: #fff; /* Text color */
+}
+
+/* Account table button styles */
+.account .account_table button {
+   margin-right: 10px; /* 10px right margin */
+}
+
+/* Icon container styles */
+.icon {
+   display: flex; /* Use flexbox layout */
+   align-items: center; /* Vertically center items */
+}
+
+/* Search bar styles */
+#searchBar {
+   width: 200px; /* Search bar width */
+   height: 35px; /* Search bar height */
+   padding: 0 10px; /* Horizontal padding */
+   border: 2px solid #cccccc; /* Border color and width */
+   background: #eeeeee; /* Background color */
+   outline: none; /* Remove outline */
+   border-radius: 3px; /* Rounded corners */
+   margin-right: 10px; /* 10px right margin */
+}
+
+/* Focus effect for search bar */
+#searchBar:focus {
+   border: 2px solid grey; /* Change border color on focus */
+}
+
+/* Cart container styles */
+#cart {
+   padding: 20px; /* Padding */
+   background: #f9f9f9; /* Background color */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+   position: fixed; /* Fixed positioning */
+   bottom: 0; /* Align to the bottom */
+   width: 100%; /* Full width */
+   max-height: 50%; /* Maximum height */
+   overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+/* Cart heading styles */
+#cart h2 {
+    text-align: center; /* Center text */
+}
+
+/* Individual cart item styles */
+.cart-item {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Vertically center items */
+    padding: 10px; /* Padding */
+    border-bottom: 1px solid #ddd; /* Bottom border */
+}
+
+/* Cart item paragraph styles */
+.cart-item p {
+    margin: 0; /* Remove margin */
+}
+
+/* Cart item button styles */
+.cart-item button {
+    background: grey; /* Background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Padding */
+    cursor: pointer; /* Show pointer cursor */
+    transition: background 0.3s; /* Transition effect */
+}
+
+/* Hover effect for cart item button */
+.cart-item button:hover {
+    background: darkgrey; /* Change background color on hover */
+}
+
+/* Media Queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* 10px vertical margin */
+    }
+
+    .main, .about, .menu, .gallery, .blog, .review, .order, .team {
+        padding: 20px; /* 20px padding on all sides */
+    }
+
+    .menu .menu_box, .gallery .gallery_image_box, .team .team_box {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .main_image img, .order_image img {
+        width: 100%; /* Full width */
+    }
+
+    .blog_form, .review_form, .order_main, .faq {
+        padding: 20px; /* 20px padding on all sides */
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    nav ul {
+        flex-direction: row; /* Stack nav items horizontally */
+    }
+
+    .main, .about, .menu, .gallery, .blog, .review, .order, .team {
+        padding: 40px; /* 40px padding on all sides */
+    }
+
+    .menu .menu_box, .gallery .gallery_image_box, .team .team_box {
+        grid-template-columns: 1fr 1fr; /* Two-column layout */
+    }
+
+    .main_image img, .order_image img {
+        width: 100%; /* Full width */
+    }
+
+    .blog_form, .review_form, .order_main, .faq {
+        padding: 30px; /* 30px padding on all sides */
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    nav ul {
+        flex-direction: row; /* Stack nav items horizontally */
+    }
+
+    .main, .about, .menu, .gallery, .blog, .review, .order, .team {
+        padding: 60px; /* 60px padding on all sides */
+    }
+
+    .menu .menu_box, .gallery .gallery_image_box, .team .team_box {
+        grid-template-columns: 1fr 1fr 1fr; /* Three-column layout */
+    }
+
+    .main_image img, .order_image img {
+        width: 80%; /* 80% width */
+    }
+
+    .blog_form, .review_form, .order_main, .faq {
+        padding: 40px; /* 40px padding on all sides */
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    nav ul {
+        flex-direction: row; /* Stack nav items horizontally */
+    }
+
+    .main, .about, .menu, .gallery, .blog, .review, .order, .team {
+        padding: 80px; /* 80px padding on all sides */
+    }
+
+    .menu .menu_box, .gallery .gallery_image_box, .team .team_box {
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* Four-column layout */
+    }
+
+    .main_image img, .order_image img {
+        width: 70%; /* 70% width */
+    }
+
+    .blog_form, .review_form, .order_main, .faq {
+        padding: 50px; /* 50px padding on all sides */
+    }
+}
+
+/* Account Management Styles */
+.account {
+    padding: 50px 20px; /* 50px top/bottom and 20px left/right padding */
+    background-color: #f9f9f9; /* Background color */
+    text-align: center; /* Center text */
+}
+
+/* Span styles inside the account section heading */
+.account h1 span {
+    color: grey; /* Text color */
+}
+
+/* Account form and table container styles */
+.account_form, .account_table {
+    margin: 20px 0; /* 20px vertical margin */
+}
+
+/* Account form input container styles */
+.account_form .input, .account_table .input {
+    margin-bottom: 15px; /* 15px bottom margin */
+    text-align: left; /* Left align text */
+}
+
+/* Account form label styles */
+.account_form .input p, .account_table .input p {
+    margin: 0; /* Remove margin */
+    font-weight: bold; /* Bold text */
+}
+
+/* Account form input styles */
+.account_form .input input, .account_table .input input {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding */
+    margin-top: 5px; /* 5px top margin */
+}
+
+/* Account form and table button styles */
+.account_form .btn, .account_table .btn {
+    background-color: #6c757d; /* Background color */
+    color: #fff; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding */
+    cursor: pointer; /* Show pointer cursor */
+}
+
+/* Hover effect for account form and table button */
+.account_form .btn:hover, .account_table .btn:hover {
+    background-color: #5a6268; /* Change background color on hover */
+}
+
+/* Account table container styles */
+.account_table {
+    width: 100%; /* Full width */
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+/* Account table styles */
+.account_table table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapse borders */
+    margin-top: 10px; /* 10px top margin */
+}
+
+/* Account table header and cell styles */
+.account_table th, .account_table td {
+    border: 1px solid #ddd; /* Border color and width */
+    padding: 10px; /* Padding */
+    text-align: left; /* Left align text */
+}
+
+/* Account table header styles */
+.account_table th {
+    background: grey; /* Background color */
+    color: #fff; /* Text color */
+}
+
+/* Close cart button styles */
+.close-cart {
+    float: right; /* Align to the right */
+    margin: 10px; /* Margin */
+}

@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration</title>
+    <!-- Linking to external CSS file -->
+    <link rel="stylesheet" href="login.css">
+    <!-- Linking to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <!-- Main container for the forms -->
+    <div class="container">
+        <!-- Login form container -->
+        <div class="form-container" id="login-container">
+            <!-- Login form header -->
+            <div class="form-header">
+                <h1>Login</h1>
+                <p id="login-message"></p>
+            </div>
+            <!-- Login form -->
+            <form id="login-form">
+                <!-- Email input field -->
+                <div class="input">
+                    <p>Email</p>
+                    <input type="email" id="login-email" placeholder="Email" required>
+                </div>
+                <!-- Password input field -->
+                <div class="input">
+                    <p>Password</p>
+                    <input type="password" id="login-password" placeholder="Password" required>
+                </div>
+                <!-- Login button -->
+                <button type="submit" class="login_btn">Login</button>
+            </form>
+            <!-- Link to switch to the registration form -->
+            <p>Don't have an account? <a href="javascript:void(0)" onclick="toggleForm('register')">Sign Up</a></p>
+        </div>
+
+        <!-- Registration form container -->
+        <div class="form-container" id="register-container" style="display: none;">
+            <!-- Registration form header -->
+            <div class="form-header">
+                <h1>Register</h1>
+                <p id="register-message"></p>
+            </div>
+            <!-- Registration form -->
+            <form id="register-form">
+                <!-- Email input field -->
+                <div class="input">
+                    <p>Email</p>
+                    <input type="email" id="register-email" placeholder="Email" required>
+                </div>
+                <!-- Password input field -->
+                <div class="input">
+                    <p>Password</p>
+                    <input type="password" id="register-password" placeholder="Password" required>
+                </div>
+                <!-- Registration button -->
+                <button type="submit" class="login_btn">Register</button>
+            </form>
+            <!-- Link to switch to the login form -->
+            <p>Already have an account? <a href="javascript:void(0)" onclick="toggleForm('login')">Login</a></p>
+        </div>
+    </div>
+
+    <!-- Linking to external JavaScript file -->
+    <script src="login.js"></script>
+</body>
+</html>
